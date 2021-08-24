@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 300px;
+            height: 350px;
+            text-align: center;
+            float: left;
+            margin-left: 20px;
+        }
+        caption {
+            margin: 10px 0;
+        }
+    </style>
+    <title>table</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Caption</caption>
+        <colgroup>
+            <col span="2" style="background-color: red"/>
+            <col style="background-color: blue"/>
+        </colgroup>
+        <thead style="background-color: green">
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+        <tfoot style="background-color: yellow">
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+
+    <table border="1">
+        <caption>1st table</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    
+
+    <table border="1">
+        <caption>2nd table</caption>
+        <tr>
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="2">6</td>
+        </tr>
+        <tr>
+            <td colspan="2">7</td>
+            <td>8</td>
+            <!-- <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td> -->
+        </tr>
+    </table>
+    
+
+    <table border="1">
+        <caption>3rd table</caption>
+        <tr>
+            <td colspan="3">1</td>
+        </tr>
+        <tr>
+            <td colspan="2">2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <!-- <td>7</td>
+            <td>8</td>
+            <td>9</td> -->
+        </tr>
+        <tr>
+            <!-- <td>10</td>
+            <td>11</td>
+            <td>12</td> -->
+        </tr>
+    </table>
+    
+
+    <table border="1">
+    <caption>4th table</caption>
+    <tr>
+        <td colspan="3">1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td colspan="2">6</td>
+    </tr>
+    <tr>
+        <td colspan="3">7</td>
+        <!-- <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td> -->
+    </tr>
+</table>
+
+
+
+</body>
+</html>
