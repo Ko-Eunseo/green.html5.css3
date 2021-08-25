@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        html {
+            box-sizing: border-box;
+        }
+        div, body, input, select {
+            margin: 0;
+        }
+        select {
+            color: inherit;
+        }
+        /* common */
+        .l_col {
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+        }
+        .l_col_12_12 { width: 100%; }
+        .l_col_11_12 { width: 91.66666667%; }
+        .l_col_10_12 { width: 83.33333333%; }
+        .l_col_9_12  { width: 75%; }
+        .l_col_8_12  { width: 66.66666667%; }
+        .l_col_7_12  { width: 58.33333333%; }
+        .l_col_6_12  { width: 50%; }
+        .l_col_5_12  { width: 41.66666667%; }
+        .l_col_4_12  { width: 33.33333333%; }
+        .l_col_3_12  { width: 25%; }
+        .l_col_2_12  { width: 16.66666667%; }
+        .l_col_1_12  { width: 8.33333333%; }
+
         body {
             width: 100%;
             text-align: center;
+            background-color: #f5f6f7;
         }
         .wrapper {          
             display: inline-block;
@@ -30,33 +59,82 @@
             font-size: 0;
             margin: 50px;
         }
-        
+        .id-form input,
+        .pw-form input,
+        .username-form input,
+        .email-form input {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #dadada;
+        }
         .test::-webkit-input-placeholder {
             text-align: right;
+        }
+        .test {
+            padding-right: 10px;
         }
         .submit {
             text-align: center;
         }
-        .birth-form {
+        .birth-form p {
+            display: block;
+        }
+        .birth-form-contents {
+            display: flex;
+            justify-content: space-between;
             width: 100%;
-            display: table;
-            table-layout: fixed;
+            
         }
         .birth-form-yy,
         .birth-form-mm,
         .birth-form-dd {
-            display: table-cell;
-            vertical-align: middle;
+            width: 100%;
+            margin-right: 10px;
+            border: 1px solid #dadada;
+            padding-left: 10px;
+        }
+        .birth-form-dd {
+            margin-right: 0;
+        }
+        .inputnum,
+        .verificationnum,
+        .phonenum,
+        .gender-contents {
+            border: 1px solid #dadada;
+            width: 100%; 
+            height: 40px;
+            padding-left: 10px;
+        }
+        .inputnum,
+        .verificationnum {
+            padding: 0;
+            padding-left: 10px;
+            box-sizing: border-box;
         }
         .submit-form {
             margin-top: 10px;
         }
+        .putnum {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .inputnum {
+            width: 68%;
+        }
+        
         .btn {
             background-color: #03c75a;
             color: white;
-            padding: 13px;
+            padding: 13px 0;
             margin-top: 10px;
             font-weight: 400;
+        }
+        .num {
+            padding: 10px;
+            margin-top: 0;
+            width: 25%;
         }
         .submit-btn {
             width: 100%;
@@ -67,20 +145,23 @@
             color: inherit;
             
         }
-        input {
-            width: ;
-            height: 20px;
-            margin: 10px;
-            padding: 10px;
+        p {
+            display: block;
+            padding: 10px 0;
         }
+        input {
+            padding: 10px 0;
+        }
+        
     </style>
     <title>실습</title>
 </head>
 <body>
-    <header>
-        <a class="main" href="www.naver.com">NAVER</a>
-    </header>
-        <form class="wrapper">
+    <form class="wrapper">
+        <header>
+            <a class="main" href="www.naver.com">NAVER</a>
+        </header>
+        <div class="contents">
             <div class="id-form">
                 <label for="id">
                     <p>아이디</p>
@@ -107,29 +188,31 @@
                 <label for="birth">
                     <p>생년월일</p>
                 </label>
-                <input type="text" name="birth" class="birth-form-yy" maxlength="4" placeholder="년(4자)" size="4"/>
-                <select name="birth" class="birth-form-mm">
-                    <option>1월</option>
-                    <option>2월</option>
-                    <option>3월</option>
-                    <option>4월</option>
-                    <option>5월</option>
-                    <option>6월</option>
-                    <option>7월</option>
-                    <option>8월</option>
-                    <option>9월</option>
-                    <option>10월</option>
-                    <option>11월</option>
-                    <option>12월</option>
-                </select>
+                <span class="birth-form-contents">
+                    <input type="text" name="birth" class="birth-form-yy .l_col_4_12" maxlength="4" placeholder="년(4자)" size="4"/>
+                    <select name="birth" class="birth-form-mm .l_col_4_12">
+                        <option>1월</option>
+                        <option>2월</option>
+                        <option>3월</option>
+                        <option>4월</option>
+                        <option>5월</option>
+                        <option>6월</option>
+                        <option>7월</option>
+                        <option>8월</option>
+                        <option>9월</option>
+                        <option>10월</option>
+                        <option>11월</option>
+                        <option>12월</option>
+                    </select>
                 <label for="birth"></label>
-                <input type="text" name="birth" class="birth-form-dd" maxlength="2" placeholder="일" size="2"/>
+                    <input type="text" name="birth" class="birth-form-dd .l_col_4_12" maxlength="2" placeholder="일" size="2"/>
+                </span>
             </div>
             <div class="gender-form">
                 <label for="gender">
                     <p>성별</p>
                 </label>
-                <select name="gender">
+                <select name="gender" class="gender-contents">
                     <option>남성</option>
                     <option>여성</option>
                     <option>선택안함</option>
@@ -147,18 +230,19 @@
                 <label for="text">
                     <p>휴대전화</p>
                 </label>
-                <select name="phone">
+                <select name="phone" class="phonenum">
                     <option>대한민국 +82</option>
                 </select>
-                <div class="acceptnum">
-                    <input type="text" placeholder="전화번호 입력">
+                <span class="putnum">
+                    <input class="inputnum" type="text" placeholder="전화번호 입력">
                     <a class="btn num" href="#">인증번호 받기</a>
-                </div>
-                <input type="text" placeholder="인증번호 입력하세요" />
+                </span>
+                <input type="text" class="verificationnum" placeholder="인증번호 입력하세요" />
             </div>            
             <div class="submit-form">
                 <a class="btn submit-btn" href="#">가입하기</a>
             </div>
-        </form>
+        </div>
+    </form>   
 </body>
 </html>
