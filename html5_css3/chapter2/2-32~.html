@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 100%;
+            text-align: center;
+        }
+        .wrapper {          
+            display: inline-block;
+            width: 460px;
+            
+        }
+        .wrapper p {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: left;
+            margin-left: 10px;
+        }
+        .main {
+            background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
+            background-size: cover;
+            width: 240px;
+            height: 44px;
+            display: inline-block;
+            font-size: 0;
+            margin: 50px;
+        }
+        
+        .test::-webkit-input-placeholder {
+            text-align: right;
+        }
+        .submit {
+            text-align: center;
+        }
+        .birth-form {
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+        }
+        .birth-form-yy,
+        .birth-form-mm,
+        .birth-form-dd {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .submit-form {
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: #03c75a;
+            color: white;
+            padding: 13px;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+        .submit-btn {
+            width: 100%;
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            
+        }
+        input {
+            width: ;
+            height: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <title>실습</title>
+</head>
+<body>
+    <header>
+        <a class="main" href="www.naver.com">NAVER</a>
+    </header>
+        <form class="wrapper">
+            <div class="id-form">
+                <label for="id">
+                    <p>아이디</p>
+                </label>
+                <input type="text" name="id" class="test" placeholder="@naver.com" />
+            </div>
+            <div class="pw-form">
+                <label for="pw">
+                    <p>비밀번호</p>
+                </label>
+                <input type="password" name="pw" />
+                <label for="pw-re">
+                    <p>비밀번호 재확인</p>
+                </label>
+                <input type="password" name="pw-re" />
+            </div>
+            <div class="username-form">
+            <label for="username">
+                <p>이름</p>
+            </label>
+            <input type="text" name="username" />
+            </div>
+            <div class="birth-form">
+                <label for="birth">
+                    <p>생년월일</p>
+                </label>
+                <input type="text" name="birth" class="birth-form-yy" maxlength="4" placeholder="년(4자)" size="4"/>
+                <select name="birth" class="birth-form-mm">
+                    <option>1월</option>
+                    <option>2월</option>
+                    <option>3월</option>
+                    <option>4월</option>
+                    <option>5월</option>
+                    <option>6월</option>
+                    <option>7월</option>
+                    <option>8월</option>
+                    <option>9월</option>
+                    <option>10월</option>
+                    <option>11월</option>
+                    <option>12월</option>
+                </select>
+                <label for="birth"></label>
+                <input type="text" name="birth" class="birth-form-dd" maxlength="2" placeholder="일" size="2"/>
+            </div>
+            <div class="gender-form">
+                <label for="gender">
+                    <p>성별</p>
+                </label>
+                <select name="gender">
+                    <option>남성</option>
+                    <option>여성</option>
+                    <option>선택안함</option>
+                </select>
+            </div>
+            <div class="email-form">
+                <label for="email">
+                    <p>본인 확인 이메일
+                        <span class="choice">(선택)</span>
+                    </p>
+                </label>
+                <input type="email" name="email">
+            </div>
+            <div class="phone-form">
+                <label for="text">
+                    <p>휴대전화</p>
+                </label>
+                <select name="phone">
+                    <option>대한민국 +82</option>
+                </select>
+                <div class="acceptnum">
+                    <input type="text" placeholder="전화번호 입력">
+                    <a class="btn num" href="#">인증번호 받기</a>
+                </div>
+                <input type="text" placeholder="인증번호 입력하세요" />
+            </div>            
+            <div class="submit-form">
+                <a class="btn submit-btn" href="#">가입하기</a>
+            </div>
+        </form>
+</body>
+</html>
