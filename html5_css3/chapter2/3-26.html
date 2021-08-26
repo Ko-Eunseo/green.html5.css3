@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Selector Basic</title>
+    <style>
+        ul {
+            overflow: hidden;
+        }
+        li {
+            list-style: none;
+            float: left;
+            padding: 20px;
+        }
+        li {
+            border-radius: 10px;
+        }
+        li:first-child,
+        li:last-child {
+            border-radius: 50%;
+        }
+        li:nth-child(2n) {
+            background-color: mediumpurple;
+        }
+        li:nth-child(2n-1) {
+            background-color: lightcoral;
+        }
+        li:nth-child(3n) {
+            border: 20px dashed lightcyan;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+        <li>4th</li>
+        <li>5th</li>
+        <li>6th</li>
+        <li>7th</li>
+        <li>8th</li>
+    </ul>
+</body>
+</html>

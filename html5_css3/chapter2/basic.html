@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        /* 0 */
+        body, h1, h2, h3, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        h1, h2, h3 {
+            font-weight: normal;
+            font-size: inherit;
+        }
+        /* style */
+        .body {
+            width: 100%;
+        }
+        .wrap {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+        .main {
+            border: 5px solid darkred;
+            margin: 10px 0;
+            position: relative;
+        }
+        header {
+            display: inline-block;
+            padding: 10px;
+        }
+        nav {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            margin-right: px;
+            right: 0;
+            border: 3px solid darkred;
+        }
+        nav ul li {
+            float: right;
+            padding: 10px;
+            
+        }
+        .content {
+            border: 5px solid darkblue;
+            margin: 10px 0;
+            position: relative;
+        }
+        section {
+            padding: 50px;
+            display: inline-block;
+        }
+        aside {
+            padding: 50px;
+            border: 3px solid darkblue;
+            display: inline-block;
+        }
+        .footer {
+            border: 5px solid darkgoldenrod;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="main">
+            <header>
+                <h1>Header</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li>Nav</li>
+                    <li>Nav</li>
+                    <li>Nav</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <section>
+                <h2>Section</h2>
+            </section>
+            <aside>
+                <h3>Aside</h3>
+            </aside>
+        </div>
+        <div class="footer">
+            <footer>
+                <p>Footer</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
