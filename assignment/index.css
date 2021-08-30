@@ -3,7 +3,13 @@ body {
   width: 100%;
   height: 100%;
 }
-body, h1, ul, li, a, p {
+body,
+h1,
+h2,
+ul,
+li,
+a,
+p {
   margin: 0;
   padding: 0;
 }
@@ -24,17 +30,29 @@ body {
   width: 980px;
   margin: 50px auto;
   text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 header {
-  background-color: lightpink;
+  background-image: url();
+  /* background-color: lightpink; */
   border-radius: 10px;
   height: 140px;
   vertical-align: middle;
   margin: 20px 0;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgb(255, 186, 161),
+    rgb(255, 185, 160) 1px,
+    lightpink 1px,
+    lightpink
+  );
 }
 header h1 {
   padding: 50px;
+  text-shadow: 3px 3px coral;
 }
 /* nav {
   background-color: rgb(255, 126, 146);
@@ -43,6 +61,7 @@ header h1 {
 } */
 .content {
   overflow: hidden;
+  min-height: 30vh;
 }
 aside {
   float: left;
@@ -51,10 +70,11 @@ aside {
   width: 270px;
 }
 aside ul {
-  display: flexbox;
+  display: flex;
   padding: 20px;
   flex-flow: column;
-  align-content: space-around;
+  justify-content: space-around;
+  height: 400px;
 }
 aside ul li {
   margin: 5px;
@@ -77,23 +97,79 @@ section .profile {
   padding: 20px;
 }
 section ul li {
-  float: right;
+  /* float: right; */
   display: block;
 }
 .introduce {
   color: black;
 }
-img {
+
+.album img {
   width: 200px;
   height: 200px;
-
+}
+.introduce {
+  position: relative;
+  min-height: 30vh;
+  float: right;
+}
+.introduce h2 {
+  font-size: 2rem;
+  padding: 20px;
+}
+.profile {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 5%;
+  top: 15%;
+  border-radius: 50%;
+}
+.introduce li {
+  text-align: left;
+  padding: 10px;
+  margin-right: 20px;
+  /* position: relative; */
+}
+.introduce li::before {
+  content: " ";
+  border-left: 3px solid #ff7690;
+  /* position: absolute; */
+  padding-left: 5px;
+}
+aside a {
+  text-shadow: 2px 2px rgb(204, 119, 136);
 }
 footer {
   background-color: lightseagreen;
   border-radius: 10px;
   min-height: 10vh;
   margin: 20px 0;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(lightskyblue 1px, transparent 1px),
+    linear-gradient(to right, lightskyblue 1px, lightseagreen 1px);
+  background-size: 20px 20px;
 }
 footer p {
   padding-top: 20px;
+  text-shadow: 2px 2px lightskyblue;
 }
+.video-album video {
+  width: 200px;
+}
+
+/* @media screen and (min-width: 800px) {
+
+  .wrap {
+    width: 50%;
+  }
+  nav {
+    flex-flow: row;
+    padding: 0;
+  }
+  .album img {
+    width: auto;
+    display: block;
+  }
+} */
