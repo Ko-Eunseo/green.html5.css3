@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {width: 100%; height: 100%;}
+        .all {width: 100%; margin: 20px auto;}
+        header, nav, aside, section, footer {
+            border: 5px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            /* border-bottom: none; */
+        }
+        .wrap {
+            margin: 30px 0;
+            width: 400px;
+        }
+        .wrapper {
+            overflow: hidden;
+        }
+        aside {
+            float: right;
+            width: 100px;
+            height: 100px;
+        }
+        section {
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <span>1</span>
+        <header>header</header>
+        <nav>nav</nav>
+        <div class="wrapper">
+            <aside>aside</aside>
+            <section>section</section>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
