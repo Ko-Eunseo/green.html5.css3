@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* 초기화 */
+* { margin: 0; padding: 0;}
+body { font-family: 'Helvetica', sans-serif;}
+li { list-style: none; }
+a { text-decoration: none; color: inherit;}
+img { border: 0;}
+html, body {height: 100%; width: 100%;}
+
+/* 전체 정렬 */
+.wrap {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+/* 네비게이션 */
+header > #title {
+    background: red;
+    overflow: hidden;
+}
+header > #title > h1 {
+    color: white;
+    float: left;
+    padding: 10px;
+}
+header > #title > .title-menu {
+    overflow: hidden;
+    float: left;
+}
+header > #title > .title-menu > ul > li {
+    float: left;
+    padding: 20px 10px;
+}
+header > #title > .side-nav {
+    overflow: hidden;
+    margin-right: 10px;
+}
+header > #title > .side-nav > div > a {
+    float: right;
+    padding: 20px 10px;
+}
+
+
+/* 메인영상 */
+#main > video {
+    background: orange;
+    width: 100%;
+}
+
+/* 콘텐츠 */
+/* 콘텐츠 영역 높이가 안늘어난다. 왜지ㅠㅠ */
+#content {
+    background: lightseagreen;
+    /* position: relative; */
+    height: 100%;
+}
+#content .visual {
+    height: 1500px;
+}
+/* 포부 */
+#content section#visual .show h2 {
+    color: red;
+    position: block;
+    font-size: 3em;
+}
+
+/* 섹션1 비주얼 */
+#content section#visual {
+    border: 3px solid red;
+    padding: 10px;
+}
+#content section#visual > #album {
+    position: relative;
+}
+#content section#visual > #album a {
+    width: 360px;
+    height: 610px;
+    /* position: absolute; */
+    margin: 30px 30px 30px 0;
+    display: inline-block;
+}
+#content section#visual > #album a:nth-child(2) {
+    position: absolute;
+    top: 0px;
+}
+#content section#visual > #album a:nth-child(3) {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    margin-right: 0;
+}
+#content section#visual > #album a:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* 센션2 인사이트 */
+#content section#insite {
+    border: 3px solid orange;
+}
+/* 섹션3 소셜 */
+#content section#social {
+    border: 3px solid greenyellow;
+}
+/* 섹션4 링크 */
+#content section#link {
+    border: 3px solid skyblue;
+}
+/* 푸터 */
+footer {
+    background: green;
+}
