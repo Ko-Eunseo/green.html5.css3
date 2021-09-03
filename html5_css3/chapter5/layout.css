@@ -131,7 +131,7 @@ header > #title > .side-nav > div > a {
 /* 센션2 인사이트 */
 #content section#insite {
     padding: 77px 0 60px 0;
-    background-color: gray;
+    background-color: rgb(235, 235, 235);
 }
 #content section#insite h3 {
     font-size: 36px;
@@ -159,11 +159,15 @@ header > #title > .side-nav > div > a {
 
 /* 섹션3 소셜 */
 #content section#social {
-    background-color: gray;
+    background-color: rgb(235, 235, 235);
+}
+
+#content section#social .social-contents {
     width: 1160px;
     margin: 0 auto;
     padding: 30px 0;
     overflow: hidden;
+    border-top: 1px solid #dadadd;
 }
 #content section#social p {
     font-size: 26px;
@@ -194,6 +198,19 @@ header > #title > .side-nav > div > a {
 #content section#link {
     border: 3px solid skyblue;
 }
+#content section#link .link-contents {
+    width: 1160px;
+    margin: 100px auto;
+
+}
+#content section#link .link-contents a {    
+    border-left: 1px solid rgb(235, 235, 235);
+    border-right: 1px solid rgb(235, 235, 235);
+    
+}
+#content section#link .link-contents a span {
+}
+
 /* 푸터 */
 footer {
     background: green;
