@@ -12,12 +12,14 @@
    var result;
    result= a>b || b>=m || m>n;     // false || false || false 
    document.write(result,"<br />");  // false
+   //or: 느슨하다. 둘중 하나만 true 여도 ok
  
    result= a>b || b>=m || m<=n;   // false || false || true
    document.write(result,"<br />"); // true
  
    result= a<=b && b>=m && m<=n; // true && false && true
    document.write(result,"<br />"); // false
+   //and: 엄격하다. 둘중 하나라도 false면 x
  
    result= a<=b && b<=m && m<=n; // true && true && true
    document.write(result,"<br />"); // true

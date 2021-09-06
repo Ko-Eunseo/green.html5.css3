@@ -195,24 +195,40 @@ header > #title > .side-nav > div > a {
 
 
 /* 섹션4 링크 */
-#content section#link {
-    border: 3px solid skyblue;
-}
 #content section#link .link-contents {
     width: 1160px;
     margin: 100px auto;
-
+    display: table;
 }
 #content section#link .link-contents a {    
     border-left: 1px solid rgb(235, 235, 235);
-    border-right: 1px solid rgb(235, 235, 235);
-    
+    display: table-cell;
+    text-align: center;
 }
+#content section#link .link-contents a:last-child {    
+    border-right: 1px solid rgb(235, 235, 235);
+}
+
 #content section#link .link-contents a span {
+    padding-bottom: 20px;
+    display: block;
+    font-weight: 600;
+    color: #333;
 }
 
 /* 푸터 */
 footer {
-    background: green;
-    min-height: 30vh;
+    width: 100%;
+    background-color: #ed133b;
+}
+
+footer #footer-link .footer-link {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer #footer-link .footer-link button{
+    float: right;
+    display: block;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write("Welome! Let's play the Javascript!", "<br/>");
+
+        // var num1 = 10;
+        // var num2 = 20;
+        // var result;
+
+        // num1--;
+        // document.write(num1, "<br/>"); //9
+
+        // num1++;
+        // document.write(num1, "<br/>"); //10
+
+        // result = num2++;
+        // document.write(result, "<br/>"); //20
+
+        // result = ++num2;
+        // document.write(result, "<br/>"); //22
+
+        // result2 = --num1 + num2;
+        // document.write(result2, "<br/>"); //9+22
+
+        // var a = 10;
+        // var b = 20;
+        // var m = 30;
+        // var n = 40;
+
+        // var result;
+        // result=(a > b || b >= m) || m > n;
+        // document.write(result, "<br/>")
+        // result = !(a) > !(b);
+        // document.write(result, "<br/>");
+        // result = !(a > b);
+        // document.write(result, "<br/>");
+
+        // var a = 20;
+        // var b = 30;
+
+        // var result = a > b? a+b:a-b;
+        // document.write(result, "<br/>");
+
+        // var price1 = 3000;
+        // var price2 = 6000;
+        // var price3 = 3000;
+        // var total = price1 + price2 + price3;
+        
+        // var result = total > 10000? + total-10000 + "원 초과":"돈 관리 잘 했어요!";
+        // document.write(result);
+
+        // var ava = (1200+1300+1000)/3;
+        // var sell4 = prompt("4분기 판매량은?","0");
+
+        // var result = ava <= sell4? "판매량이 평균 이상입니다.":"판매량이 평균 미달입니다.";
+        // document.write(result);
+
+        var name = prompt("당신의 이름은?" ,"");
+        var height = prompt("당신의 신장은?", "0");
+        var weight = prompt("당신의 몸무게는?", "0");
+
+        var normal = (height - 100)*0.9;
+        var result = weight >= normal - 5 && weight <= normal + 5;
+        result = result? "적정 체중입니다.":"적정 체중이 아닙니다.";
+        // document.write("<h1>몸무게 계산기</h1><br/>" 
+        //                 + "<table border='1'><tr><th>이름</th><th>신장</th><th>몸무게</th><th>평균체중</th><th>결과</th></tr>"
+        //                 + "<tr><td>" 
+        //                 + name + "</td><td>" + height + "</td><td>" + weight + "</td><td>" +normal + "</td><td>" + result 
+        //                 + "</td></tr></table>");
+
+        var str = "<h1>몸무게 계산기</h1><br/>" ;
+            str += "<table border='1'><tr><th>이름</th><th>신장</th><th>몸무게</th><th>평균체중</th><th>결과</th></tr>";
+            str += "<tr><td>";
+            str += name + "</td><td>" + height + "</td><td>" + weight + "</td><td>" +normal + "</td><td>" + result;
+            str += "</td></tr></table>";
+
+        document.write(str);
+    </script>
+</body>
+</html>
