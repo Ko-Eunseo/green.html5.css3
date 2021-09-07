@@ -37,21 +37,101 @@
         //각각 "합격"과 "불합격"을 브라우저에 출력해보자.
         //점수가 0미만 100초과이면 "에러입니다"라는 alert창을 띄운다.
 
-        var grade = prompt("학년을 입력하세요");
-        var score = prompt("점수를 입력하세요");
-        var error = alert("에러입니다.")
+        // var grade = prompt("학년을 입력하세요");
+        // var score = prompt("점수를 입력하세요");
+        // var error = alert("에러입니다.")
 
-        if(grade==4&&score>=70&&0<=score<=100){
-            document.write("합격");
-        } else if(grade==4&&score<70&&0<=score<=100){
-            document.write("불합격");
-        } else if(grade!=4&&1<=grade<=6&&score>=60&&0<=score<=100){
-            document.write("합격")
-        } else if(grade!=4&&1<=grade<=6&&score<60&&0<=score<=100){
-            document.write("불합격");
-        } else if(0<=score<=100){
-            document.write(error);
+        // var grade = prompt("학년을 입력하세요");
+        // var score = prompt("점수를 입력하세요");
+        // var error = alert("에러입니다.");
+
+
+        // if((grade!=4&&60<=score)||(grade==4&&70<=score)){
+        //     document.write("합격");
+        // } else((grade!=4&&score<60)||(grade==4&&score<70)){
+        //     document.write("불합격");
+        // } 
+
+        // if((grade!=4&&60<=score)||(grade==4&&70<=score)){
+        //     document.write("합격");
+        //     if((score<0)||(100<score)){
+        //     document.write(error);}
+        // } else{
+        // document.write("불합격");
+        // }
+
+
+        // 2-1. 정수 한 개를 입력받아 입력받은 수가 양수, 0, 음수인지 판단해보자.
+
+        // var num = prompt("정수를 입력하세요");
+        
+        // if(num<0){
+        //     document.write("음수");
+        // } else if(num==0){
+        //     document.write("0");
+        // } else{
+        //     document.write("양수");
+        // }
+
+        // 2-2. 사용자로부터 신장을 입력받는다. 입력받은 신장이 
+        //    1) 150 이상이면, 놀이기구 이용 가능
+        //    2) 150 미만이면,
+        // 부모와 함께 왔는지 한 번 더 묻는다.(confirm창 이용) 
+        // 함께 왔다면 확인(TRUE)을 누르고 혼자 왔다면 취소(FALSE) 버튼을 누른다. 
+        // 확인 입력시: 좋은 시간 보내렴~(브라우저 출력)
+        //      취소 입력시: 어른 모시고 다시 오렴~(브라우저 출력)
+
+        // var tall = prompt("키가 어떻게 되세요?");
+
+        // if(150<=tall){
+        //     document.write("pass!")
+        // } else if(150>tall){
+        //     var question = confirm("부모님이랑 오셨어요?");
+        //     if(question){
+        //         document.write("좋은 시간 보내렴~");
+        //     }else{
+        //         document.write("어른 모시고 다시 오렴~");
+        //     }
+        // }
+
+        // 문제2-3. 사용자로부터 세 개의 정수를 입력받아,
+        //  그 수들의 최대값과 최소값, 합계와 평균을 구해서 브라우저에 출력
+
+        var num1 = Number(prompt("세 개의 정수를 입력하세요"));
+        var num2 = Number(prompt("세 개의 정수를 입력하세요"));
+        var num3 = Number(prompt("세 개의 정수를 입력하세요"));
+
+        function max(a) {
+            var result;
+            if((num1<num2)&&(num2<num3)){
+                result=num2;
+            } else if((num1<num3)&&(num2<num3)){
+                result=num3;
+            } else{
+                result=num1;
+            }
+            return result;
         }
+        function min(b) {
+            var result2;
+            if((num1<num2)&&(num1<num3)){
+                result2=num1;
+            } else if((num2<num3)&&(num2<num1)){
+                result2=num2;
+            } else{
+                result2=num3;
+            }
+            return result2;
+        }
+        var total = num1 + num2 + num3;
+        var ava = (num1 + num2 + num3)/3;
+
+        document.write("총합: "+ total + "<br />");
+        document.write("평균: " + ava + "<br />");
+        document.write("최댓값: " + a + "<br />");
+        document.write("최솟값: " + b + "<br />");
+
+        
 
     </script>
 </body>
