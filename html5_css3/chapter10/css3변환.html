@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Transform</title>
+    <style>
+        section {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            border: 5px solid rgb(183, 202, 145);
+            transform: rotate(45deg);
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: thistle;
+            transform: rotate(45deg);
+            position: relative;
+        }
+        span {
+            width: 70px;
+            height: 70px;
+            background-color: rgb(245, 166, 245);            
+            transform: rotate(45deg);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3차원 변환 -->
+    <!-- z축: 사용자에게 가까울수록 큰값 -->
+    <section>
+        <div>
+            <span></span>
+        </div>
+    </section>    
+</body>
+</html>
