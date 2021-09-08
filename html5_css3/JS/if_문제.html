@@ -37,28 +37,27 @@
         //각각 "합격"과 "불합격"을 브라우저에 출력해보자.
         //점수가 0미만 100초과이면 "에러입니다"라는 alert창을 띄운다.
 
+        
         // var grade = prompt("학년을 입력하세요");
         // var score = prompt("점수를 입력하세요");
-        // var error = alert("에러입니다.")
-
-        // var grade = prompt("학년을 입력하세요");
-        // var score = prompt("점수를 입력하세요");
-        // var error = alert("에러입니다.");
-
-
-        // if((grade!=4&&60<=score)||(grade==4&&70<=score)){
+        
+        // //1. 학년과 점수를 입력받는다.
+        // //   >> 점수가 0점 미만 100점 초과면 에러창을 띄운다.
+        // //2. 4학년은 70점 이상이면 합격처리한다.
+        // //3. 1~6학년이 60점 이상이면 합격처리한다.
+        // //4. 그외에는 불합격 처리한다.
+        
+        // if((score<0)||(100<score)){
+        //     alert("에러입니다.");
+        // } else if((grade==4)&&(70<=score)){
         //     document.write("합격");
-        // } else((grade!=4&&score<60)||(grade==4&&score<70)){
-        //     document.write("불합격");
-        // } 
-
-        // if((grade!=4&&60<=score)||(grade==4&&70<=score)){
+        // } else if((grade!=4)&&(60<=score)){
         //     document.write("합격");
-        //     if((score<0)||(100<score)){
-        //     document.write(error);}
         // } else{
-        // document.write("불합격");
+        //     document.write("불합격");
         // }
+
+        
 
 
         // 2-1. 정수 한 개를 입력받아 입력받은 수가 양수, 0, 음수인지 판단해보자.
@@ -97,40 +96,86 @@
         // 문제2-3. 사용자로부터 세 개의 정수를 입력받아,
         //  그 수들의 최대값과 최소값, 합계와 평균을 구해서 브라우저에 출력
 
-        var num1 = Number(prompt("세 개의 정수를 입력하세요"));
-        var num2 = Number(prompt("세 개의 정수를 입력하세요"));
-        var num3 = Number(prompt("세 개의 정수를 입력하세요"));
+        // var num1 = Number(prompt("세 개의 정수를 입력하세요"));
+        // var num2 = Number(prompt("세 개의 정수를 입력하세요"));
+        // var num3 = Number(prompt("세 개의 정수를 입력하세요"));
 
-        function max(a) {
-            var result;
-            if((num1<num2)&&(num2<num3)){
-                result=num2;
-            } else if((num1<num3)&&(num2<num3)){
-                result=num3;
-            } else{
-                result=num1;
+        // var max='';
+        // if((num1<num2)&&(num3<num2)){
+        //     max=num2;
+        // } else if((num1<num3)&&(num2<num3)){
+        //     max=num3;
+        // } else{
+        //     max=num1;
+        // }
+        // document.write(max + "<br/>");
+        
+        // var min='';
+        // if((num1<num2)&&(num1<num3)){
+        //     min=num1;
+        // } else if((num2<num3)&&(num2<num1)){
+        //     min=num2;
+        // } else{
+        //     min=num3;
+        // }
+        // document.write(min + "<br/>");
+        
+        // var total = num1 + num2 + num3;
+        // document.write(total+"<br/>");
+        // var ava = (num1 + num2 + num3)/3;
+        // document.write(ava+"<br/>");
+
+        //보너스 자판기 문제
+        //prompt로 돈과 과자를 입력받은 후 내가 입력한 과자이름과 거스름돈을 브라우저에 출력해보자.
+        //입력받을 과자 종류는 다음과 같다.
+        //과자 종류" 허니버터(1300원), 칸쵸(1500원), 프링글스(3000원)
+        //아래와 같은 상황일 땐 에러 메세지 출력후 페이지 새로고침(location.reload()이용)
+        //a. 돈을 넣지 않았을 때
+        //b. 돈이 모자랄 때
+        //c. 해당 과자가 존재하지 않을 때
+
+        //1. 프롬프트로 돈, 과자 입력
+        //2. 과자이름, 거스름돈 출력
+
+        var money = Number(prompt("돈을 넣어주세요."));
+        var buy = prompt("살 과자를 입력해주세요.");
+        var snack = ["허니버터", "칸쵸", "프링글스"];
+        var price = [1300, 1500, 3000];
+        
+        if(money==''){
+            alert("돈을 넣지 않았어요!");
+            location.reload();
+
+        } else if(buy=="허니버터"){
+            document.write(snack[0]);
+            document.write(money-price[0] + "원");
+
+            if(money<price[0]){
+                alert("돈이 모자라요!");
+                location.reload();
             }
-            return result;
-        }
-        function min(b) {
-            var result2;
-            if((num1<num2)&&(num1<num3)){
-                result2=num1;
-            } else if((num2<num3)&&(num2<num1)){
-                result2=num2;
-            } else{
-                result2=num3;
+
+        } else if(buy=="칸쵸"){
+            document.write(snack[1]);
+            document.write(money-price[1] + "원");
+
+            if(money<price[1]){
+                alert("돈이 모자라요!");
+                location.reload();
             }
-            return result2;
+
+        } else if(buy=="프링글스"){
+            document.write(snack[2]);
+            document.write(money-price[2] + "원");
+
+            if(money<price[2]){
+                alert("돈이 모자라요!");
+                location.reload();
+            }
+        } else{
+            alert("그 과자는 없어요.");
+            location.reload();
         }
-        var total = num1 + num2 + num3;
-        var ava = (num1 + num2 + num3)/3;
-
-        document.write("총합: "+ total + "<br />");
-        document.write("평균: " + ava + "<br />");
-        document.write("최댓값: " + a + "<br />");
-        document.write("최솟값: " + b + "<br />");
-
         
 
     </script>
