@@ -147,28 +147,31 @@
             location.reload();
 
         } else if(buy=="허니버터"){
-            document.write(snack[0]);
-            document.write(money-price[0] + "원");
-
-            if(money<price[0]){
+            if(money>price[0]){
+                document.write(snack[0]);
+                document.write(money-price[0] + "원");
+            }
+            else{
                 alert("돈이 모자라요!");
                 location.reload();
             }
 
         } else if(buy=="칸쵸"){
-            document.write(snack[1]);
-            document.write(money-price[1] + "원");
-
-            if(money<price[1]){
+            if(money>price[1]){
+                document.write(snack[1]);
+                document.write(money-price[1] + "원");
+            }
+            else{
                 alert("돈이 모자라요!");
                 location.reload();
             }
 
         } else if(buy=="프링글스"){
-            document.write(snack[2]);
-            document.write(money-price[2] + "원");
-
-            if(money<price[2]){
+            if(money>price[2]){
+                document.write(snack[2]);
+                document.write(money-price[2] + "원");
+            }
+            else{
                 alert("돈이 모자라요!");
                 location.reload();
             }
