@@ -219,16 +219,28 @@ header > #title > .side-nav > div > a {
 /* 푸터 */
 footer {
     width: 100%;
-    background-color: #ed133b;
+    background-color: #262626 ;
+
 }
 
 footer #footer-link .footer-link {
-    width: 1160px;
-    margin: 0 auto;
     padding: 20px;
+    background-color: #ed133b;
+    margint-right: 100px;
 }
 
 footer #footer-link .footer-link button{
     float: right;
     display: block;
+}
+
+footer #foot {
+    background-color: #262626;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+footer #foot .foot {
+    color: white;
+    min-height: 200px;
 }
