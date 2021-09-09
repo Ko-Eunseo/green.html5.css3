@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1.
+    // var a = new Array();
+    // a[0] = "banana";
+    // a[1] = "peach";
+    // a[2] = "apple";
+
+    // 2.
+    // var a = new Array("바나나","복숭아","사과");
+
+    // document.write(a[2]);
+
+    // 3.
+    // var a = ["바나나","복숭아","사과"];
+    // 뭐든지 들어갈 수 있음. 배열, 객체, 숫자 등등
+
+
+    var arr = [30, "따르릉", true];
+
+    document.write("<h3>배열값 가져오기</h3>");
+    document.write(arr[0],"<br/>");
+    document.write(arr[1],"<br/>");
+    document.write(arr[2],"<br/>");
+
+    document.write("<h3>배열값 가져오기</h3>");
+    for (var i = 0; i<arr.length; i++){
+        document.write(arr[i],"<br/>");
+    }
+    document.write("<h3>배열값 가져오기</h3>");
+    for (i in arr) {
+        document.write(arr[i],"<br/>");
+    }
+    </script>
+</body>
+</html>

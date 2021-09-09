@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 오늘부터 3일 뒤 날짜를 구하시오.
+
+        var addDay = 3;
+        var nowDate = new Date();
+
+        // var nowMonth = today.getMonth(),
+        // nowDate = today.getDate(),
+        // nowDay = today.getDay();
+
+        // document.write((nowMonth+1)+"월 ");
+        // document.write((nowDate+addDay)+"일 ");
+        // document.write((nowDay+addDay)+"요일 ");
+        
+        // 답
+        var addDate = nowDate.getTime() + (addDay * 24 * 60 * 60 * 1000);
+        nowDate.setTime(addDate);
+
+        var year = nowDate.getFullYear();
+        //연도를 다 보여줌. getyear은 2021-1900을 빼고 보여준다.
+        var month = nowDate.getMonth() + 1;
+        var date = nowDate.getDate();
+
+        document.write(year + '/' + month + '/' + date);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체</title>
+</head>
+<body>
+
+    <script>
+        // var tv = new Object();
+        // tv.color = "white";
+        // tv.price = 1000000;
+        // tv.info = function(){
+        //     document.write("TV색상: "+this.color,"<br/>");
+        //     document.write("TV가격: "+this.price,"<br/>");
+        // }
+
+        // document.write("<h1>TV객체 메서드 호출</h1>");
+        // tv.info();
+
+        // var today = new Date();
+        // var nowMonth = today.getMonth()+1,
+        // nowDate = today.getDate(),
+        // nowDay = today.getDay();
+
+        // document.write("<h1>오늘 날짜 정보</h1>");
+        // document.write("현재 월: "+ nowMonth,"<br/>");
+        // document.write("현재 일: "+ nowDate,"<br/>");
+        // document.write("현재 요일: "+ nowDay,"<br/>");
+
+
+        // var worldcup = new Date(2002,4,31);
+        // var theMonth = worldcup.getMonth(),
+        // theDate = worldcup.getDate(),
+        // theDay = worldcup.getDay();
+
+        // document.write("<h1>월드컵 날짜 정보</h1>");
+        // document.write("2002월드컵 몇 월: " + theMonth,"<br/>");
+        // document.write("2002월드컵 몇 일: " + theDate,"<br/>");
+        // document.write("2002월드컵 몇 요일: " + theDay,"<br/>");
+
+
+
+        //랜덤객체
+
+        document.write("<h1>가위바위보 맞추기</h1>");
+
+        var game = prompt("가위, 바위, 보 중 선택하세요.","가위");
+        var gateNum;
+        switch(game) {
+            case "가위":
+                gameNum =1; break;
+            case "바위":
+                gameNum =2; break;
+            case "보":
+                gameNum =3; break;
+            default: alert("잘못 작성했습니다.");
+            location.reload();
+        }
+
+        var com = Math.ceil(Math.random()*3);
+
+        document.write("<img src=\"04_images/math_img_"+com+".jpg\">");
+
+        if(gameNum == com) {
+            document.write("<img src=\"04_images/game_1.jpg\">");
+        } else {
+            document.write("<img src=\"04_images/game_2.jpg\">");
+        }
+    </script>
+
+</body>
+</html>

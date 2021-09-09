@@ -15,6 +15,17 @@
         //***
         //****
         //*****
+        var a = "*";
+        var b = "*";
+        for(i=1;i<6;i++){
+            for(j=1;j<6;j++){
+                if(i=j){
+                console.log(a+"<br/>");
+                a+=b;
+                }
+            }
+            console.log("<br/>");
+        }
 
         // for(i=1;i<6;i++){
         //     for(j=1;j<=i;j++){
@@ -30,6 +41,16 @@
             console.log("<br/>");
         }
 
+        //풀이
+        //이중포문
+        for (var i = 0; i< 5; i++){
+            var triangle = ''; //초기화: 중괄호 영역 잘 생각. 중괄호안에서만 유효함
+
+            for (var j = 0; j <= i; j++){
+                triangle +="*";
+            }
+            console.log(triangle);
+        }
     </script>
 </body>
 </html>
