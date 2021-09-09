@@ -32,21 +32,12 @@
         for(var i=1;i<6;i++){
             for(var j=1;j<6;j++){
                 if(i<=j){
-                document.write("*");
-                
-                }document.write("&nbsp");
-            }document.write("<br/>");
-        }
-        
-        for (var i = 1; i < 6; i++){
-            var triangle = '';
-            for(var j =1; j < i; j++){
-                triangle += ' ';
+                    document.write("*");
+                } else {
+                document.write("&nbsp");
+                }
             }
-            for (var k = 6; k > i; k--){
-                triangle+='*';
-            }
-            console.log(triangle);
+            document.write("<br/>");
         }
 
         //풀이
