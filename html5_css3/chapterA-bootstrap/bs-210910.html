@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/html5_css3/chapterA-bootstrap/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+
+    <style>
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">배열</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">연산자</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">제어문</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">반복문</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">객체</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">종류</th>
+                <th scope="col">설명</th>
+                <th scope="col">기타</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>sort()</td>
+                <td>오름차정렬</td>
+                <td>배열 자체가 변함</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>slice()</td>
+                <td>구간 반환</td>
+                <td>slice(1,3)일때 1,2인덱스 반환</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>splice()</td>
+                <td>비우고 데이터 in</td>
+                <td>splice(삽입할자리, 삭제할갯수, 삽입데이터1, 삽입데이터2)</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>concat()</td>
+                <td>배열 합체</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>shift()</td>
+                <td>첫번째 데이터 x</td>
+                <td>var data=arr1.shift();</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>pop()</td>
+                <td>마지막 데이터 x</td>
+                <td>var data=arr1.pop();</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>unshift()</td>
+                <td>맨앞에 데이터 in</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script src="/html5_css3/chapterA-bootstrap/bootstrap-5.1.1-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
