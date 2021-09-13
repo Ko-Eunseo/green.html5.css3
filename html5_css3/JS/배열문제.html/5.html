@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    5. 배열에서 중복 항목을 제거하는 코드를 작성하십시오
+    -->
+    <script>
+        var num = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+
+        //n째, n+1째 숫자를 비교해 첫번째 숫자가 크거나 작으면 뒤로 보낸다.
+        //만일 이 두 숫자가 같다면 n번째 숫자를 앞으로 보낸다.
+        //앞으로 보낸 숫자를 삭제한다. (shift)
+        //num.length만큼 반복한다.
+
+        for(var i=0; i>num.length; i++){
+            var result = [];
+            if(i==i+1){
+                num.splice(result,1);
+            }
+        }
+        console.log(num);
+    </script>
+</body>
+</html>
