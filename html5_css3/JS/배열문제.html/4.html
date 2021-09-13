@@ -12,11 +12,12 @@
     예를 들어 225468을 수락하면 출력은 -2-254-6-8이어야 합니다.
     -->
     <script>
-        const num = window.prompt("숫자를 입력하세요","0");
+        //스트링 어레이로 바꾸는법: Array.from()
+        const num = Array.from(prompt("숫자를 입력하세요","0"));
         const str = num.toString(); // 문자열은 배열화가 된다고 생각해야됨
         const result = [];
 
-        //num으로 n자리 숫자를 받음.("12345"일때, "1-23-45")가 됨.
+        //num으로 n자리 숫자를 받음.("1234"일때, "1-23-4")가 됨.
         //n%2==0 일때 join(-)
 
         // result = num.join("-");
@@ -26,6 +27,16 @@
         //     result = str.join("-");
         // }
         // console.log(result);
+
+        for( i = 0; i < num.length; i++){
+            var rest=[];
+            rest = num[i]%2;
+        } if(rest==0){
+            str = num.join('-');
+            //조인이 함수가 아니라고 함.
+            //찾아보니 스트링과는 못쓰고 배열이랑만 쓴다고..
+        }
+        console.log(result);
 
     </script>
 </body>

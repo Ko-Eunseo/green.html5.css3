@@ -12,19 +12,15 @@
     -->
     <script>
         var num = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+        
+        console.log([...new Set(num)]);
 
-        //n째, n+1째 숫자를 비교해 첫번째 숫자가 크거나 작으면 뒤로 보낸다.
-        //만일 이 두 숫자가 같다면 n번째 숫자를 앞으로 보낸다.
-        //앞으로 보낸 숫자를 삭제한다. (shift)
+        //순서대로 정리한다.
+        //n째, n+1째 숫자를 비교해 첫번째 숫자가 크거나 작으면 
+        //만일 이 두 숫자가 같다면 n번째 숫자를 다른 변수에 push
+        //앞으로 보낸 숫자를 삭제한다.
         //num.length만큼 반복한다.
 
-        for(var i=0; i>num.length; i++){
-            var result = [];
-            if(i==i+1){
-                num.splice(result,1);
-            }
-        }
-        console.log(num);
     </script>
 </body>
 </html>
