@@ -9,14 +9,14 @@
 <body>
     <script>
     var str = "url.html?name=javascript&no=123&porp=test&date=20211211";
-
+    
     // 2. 해당 주소에서 쿼리스트링만 분리하시오.
     //? 이전 날리기..
     
-    document.write(str.indexOf("name"),"<br/>");
-    document.write(str.length,"<br/>");
-    
-    var querystr = str.substring(9,55);
+    document.write(str.indexOf("name"),"<br/>"); //str.indexOf("?")+1
+    // document.write(str.length,"<br/>");
+    //가변성 때문에 숫자를 쓰는것은 지양해야 한다.
+    var querystr = str.substring(9,str.length);
     document.write(querystr,"<br/>");
 
     // 3. 각각의 쿼리스트링의 변수와 값을 콘솔에 출력하시오.(변수와 값을 굳이 분리하지 않아도 됨)

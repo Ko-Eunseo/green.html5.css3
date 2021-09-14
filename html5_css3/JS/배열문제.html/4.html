@@ -13,13 +13,12 @@
     -->
     <script>
         //스트링 어레이로 바꾸는법: Array.from()
-        const num = Array.from(prompt("숫자를 입력하세요","0"));
+        const num = prompt("숫자를 입력하세요","0");
         const str = num.toString(); // 문자열은 배열화가 된다고 생각해야됨
         const result = [];
 
         //num으로 n자리 숫자를 받음.("1234"일때, "1-23-4")가 됨.
         //n%2==0 일때 join(-)
-
         // result = num.join("-");
         // console.log(result);
 
