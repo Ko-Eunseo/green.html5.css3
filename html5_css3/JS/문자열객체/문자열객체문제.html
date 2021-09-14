@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str = "url.html?name=javascript&no=123&porp=test&date=20211211";
+
+    // 2. 해당 주소에서 쿼리스트링만 분리하시오.
+    //? 이전 날리기..
+    
+    document.write(str.indexOf("name"),"<br/>");
+    document.write(str.length,"<br/>");
+    
+    var querystr = str.substring(9,55);
+    document.write(querystr,"<br/>");
+
+    // 3. 각각의 쿼리스트링의 변수와 값을 콘솔에 출력하시오.(변수와 값을 굳이 분리하지 않아도 됨)
+    var query = querystr.split("&");
+    document.write(query,"<br/>");
+    for(i=0;i<query.length;i++){
+        document.write(query[i],"<br/>");
+    }
+    </script>
+</body>
+</html>

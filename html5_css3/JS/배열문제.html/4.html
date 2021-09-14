@@ -32,9 +32,11 @@
             var rest=[];
             rest = num[i]%2;
         } if(rest==0){
-            str = num.join('-');
+            result = num.join('-');
             //조인이 함수가 아니라고 함.
             //찾아보니 스트링과는 못쓰고 배열이랑만 쓴다고..
+        } else {
+            result = num;
         }
         console.log(result);
 
