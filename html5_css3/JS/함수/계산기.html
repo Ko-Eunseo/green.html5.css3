@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 계산기 */
+        #calcultor {
+            float: left;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: wheat;
+        }
+        /* 출력화면 */
+        #calcultor #input #putNum {
+            background-color: khaki;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: right;
+        }
+        /* 버튼 */
+        .btn {
+            padding: 10px 15px;
+            border: 2px solid black;
+            background-color: lightcoral;
+            text-align: center;
+            margin: 5px auto;
+        }
+        #btns .btn {
+            margin: 3px auto;
+        }
+        #btns .btn:last-child {
+        }
+
+        #number .btn:last-child {
+            padding: 10px 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        // 1. 덧셈, 뺄셈, 나눗셈, 곱셈
+        // var num1 = Number(prompt("첫번째 숫자를 입력해주세요."));
+        // var num2 = Number(prompt("두번째 숫자를 입력해주세요."));
+
+
+        // 순서1. 숫자1 클릭 /순서2. 연산자 클릭/ 순서3. 숫자2 클릭/ 순서4. =클릭
+        
+
+        var num1 ='';
+        var num2 ='';
+        var operator ='';
+
+        var onClick
+
+
+
+        function add(a, b) {
+            var result = a + b;
+            return add;
+        }
+        function sub(a, b) {
+            var result = a-b;
+            return sub;
+        }
+        function division(a, b) {
+            var result = a/b;
+            return division;
+        }
+        function multiple(a, b) {
+            var result = a*b;
+            return multiple;
+        }
+
+        document.write(add(num1, num2), "<br/>");
+        document.write(sub(num1, num2), "<br/>");
+        document.write(division(num1, num2), "<br/>");
+        document.write(multiple(num1, num2), "<br/>");
+
+        
+
+
+        // 2. xxAC기능(초기화)xx
+        // 3. 매개변수 2개
+        // 4. 결과값은 리턴해서 콘솔이나 도큐먼트로 출력
+    </script>
+
+    <div id="calcultor">
+        <div id="input">
+            <input type="text" id="putNum" value="0000"></p>
+        </div>
+        <div id="btns">
+            <button onclick="division()" id="divisionBtn" class="btn" value="/">/</button>
+            <button onclick="multiple()" id="multipleBtn" class="btn" value="*">*</button>
+            <button onclick="sub()" id="subBtn" class="btn" value="-">-</button>
+            <button onclick="add()" id="add" class="btn" value="+">+</button>
+            <!-- 아직xx -->
+        </div>
+        <div id="number">
+            <button class="btn" value="1">1</button>
+            <button class="btn" value="2">2</button>
+            <button class="btn" value="3">3</button>
+            <br/>
+            <button class="btn" value="4">4</button>
+            <button class="btn" value="5">5</button>
+            <button class="btn" value="6">6</button>
+            <br/>
+            <button class="btn" value="7">7</button>
+            <button class="btn" value="8">8</button>
+            <button class="btn" value="9">9</button>
+            <br/>
+            <button class="btn" value="0">0</button>
+            <button onclick="enter()" class="btn" value="=">=</button>
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
