@@ -21,6 +21,29 @@
         //앞으로 보낸 숫자를 삭제한다.
         //num.length만큼 반복한다.
 
+        var x,
+        out=[],
+        obj=[];
+
+        for (x = 0; x< num.length; x++){
+            obj[num[x]] = 0;
+        }
+        //1. 중복을 제거
+        // x가 1일때 obj[2]=0
+        // x가 2일때 obj[2]=0, 변하지 않는 것처럼 보인다.
+        // x가 4일때 obj[4]=0, obj[3]은 빈 상태.
+        //obj 최종적으로 (9) [empty,0,0,0,0,0,0,0,0]
+
+        //2.
+        for (x in obj) {
+            out.push(x);
+        }
+        //중복이 제거된 데이터들을 넣어준다.
+
+        console.log(num);
+        console.log(out);
+        
+
     </script>
 </body>
 </html>
