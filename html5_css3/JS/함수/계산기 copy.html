@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #calculator {
+            width: 150px;
+            border: 2px solid rgb(59, 42, 36);
+            border-radius: 10px;
+            padding: 5px;
+        }
+        #display {
+            border: 2px solid rgb(59, 42, 36);
+            text-align: right;
+            padding-right: 10px;
+            min-height: 30px;
+        }
+        /* .before {
+        }
+        .after {
+        } */
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        <div id="btns">
+            <button class="btn num" value="1">1</button>
+            <button class="btn num" value="2">2</button>
+            <button class="btn num" value="3">3</button>
+            <button onclick="division()" id="divisionBtn" class="btn" value="/">/</button>
+            <br/>
+            <button class="btn num" value="4">4</button>
+            <button class="btn num" value="5">5</button>
+            <button class="btn num" value="6">6</button>
+            <button onclick="multiple()" id="multipleBtn" class="btn" value="*">*</button>
+            <br/>
+            <button class="btn num" value="7">7</button>
+            <button class="btn num" value="8">8</button>
+            <button class="btn num" value="9">9</button>
+            <button onclick="sub()" id="subBtn" class="btn" value="-">-</button>
+            <br/>
+            <button class="btn num" value="0">0</button>
+            <button onclick="enter()" class="btn" value="=">=</button>
+            <button onclick="add()" id="add" class="btn" value="+">+</button>
+        </div>
+    </div>
+
+    <script>
+
+        // 순서1. 숫자1 클릭 /순서2. 연산자 클릭/ 순서3. 숫자2 클릭/ 순서4. =클릭
+        // 디스플레이 숫자 반환
+        //숫자클릭
+        // document.getElementsByClassName('num').addEventLister('click', clickNum);
+        // function clickNum(num){
+        //     var putNum = document.getElementById('putNum');
+        //     putNum.innerHTML = putNum.innerHTML + num;
+        //     }
+        // clickNum(num);
+
+        const input = document.getElementById("before");
+        const buttons = document.querySelectorAll('button');
+
+        document.querySelectorAll('.num').forEach((element) => {
+            element.addEventListener("click", () => {
+                input.innerText += element.innerText;
+            });
+        });
+
+    </script>
+
+
+    
+</body>
+</html>
