@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* clear */
+
+* { 
+    margin: 0; padding: 0;
+    font-family: Arial, 'sans-serif';
+}
+a { text-decoration: none !important; color: inherit; }
+img { border: 0;}
+ul { list-style: none;}
+
+/* 헤더 */
+header {
+    background-color: lightgray;
+}
+
+header > #main_header {
+    width: 100%;
+    overflow: hidden;
+}
+
+header > #main_header > #gnb_wrap {
+    margin: 20px;
+    height: 100px;
+}
+
+
+/* 로고 */
+header > #main_header > #gnb_wrap > #logo {
+    float: left;
+    background-color: pink;
+    padding: 10px;
+}
+
+/* 네이게이션 */
+header > #main_header > #gnb_wrap > #nav {
+    float: left;
+    overflow: hidden;
+}
+
+header > #main_header > #gnb_wrap > #nav > div {
+    float: left;
+    padding: 10px;
+    color: black;
+}
+
+/* 아이콘 */
+header > #main_header > #gnb_wrap > #icons {
+    float: right;
+    overflow: hidden;
+    height: 100%;
+}
+
+header > #main_header > #gnb_wrap > #icons > .login {
+    float: left;
+    margin-right: 10px;
+}
+header > #main_header > #gnb_wrap > #icons > .login > span {
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+header > #main_header > #gnb_wrap > #icons > .icons {
+    overflow: hidden;
+    float: left;
+}
+
+header > #main_header > #gnb_wrap > #icons > .icons > div {
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+/* 컨텐츠 */
+#main_contents {
+
+}
+
+#main_contents .content {
+    background-color: lightgreen;
+}
+#main_contents > .employ {
+    background-color: rgb(143, 187, 143);
+}
+#main_contents > .location {
+    background-color: rgb(73, 148, 73);
+}
+#main_contents > .article {
+    background-color: rgb(74, 168, 74);
+}
+
+/* 푸터 */
+footer {
+    background-color: #00712f;
+}
