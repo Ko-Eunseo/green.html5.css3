@@ -2,97 +2,255 @@
 
 /* clear */
 
-* { 
-    margin: 0; padding: 0;
-    font-family: Arial, 'sans-serif';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, "sans-serif";
 }
-a { text-decoration: none !important; color: inherit; }
-img { border: 0;}
-ul { list-style: none;}
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+img {
+  border: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+}
 
 /* 헤더 */
 header {
-    background-color: lightgray;
 }
 
 header > #main_header {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 header > #main_header > #gnb_wrap {
-    margin: 20px;
-    height: 100px;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
 }
-
 
 /* 로고 */
-header > #main_header > #gnb_wrap > #logo {
-    float: left;
-    background-color: pink;
-    padding: 10px;
+.logo {
+  float: left;
+  padding: 10px;
+  background-image: url(/html5_css3/responsive/komipo-service/img/logo.svg);
+  font-size: 0;
+  width: 227px;
+  height: 47px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 15px;
 }
 
-/* 네이게이션 */
+/* 네비게이션 */
+header > #main_header > #gnb_wrap {
+  position: fixed;
+}
+
 header > #main_header > #gnb_wrap > #nav {
-    float: left;
-    overflow: hidden;
+  float: left;
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
 }
 
-header > #main_header > #gnb_wrap > #nav > div {
-    float: left;
-    padding: 10px;
-    color: black;
+header > #main_header > #gnb_wrap > #nav > li {
+  color: black;
+  font-size: 25px;
+  display: inline-block;
+}
+
+header > #main_header > #gnb_wrap > #nav > li > a {
+  padding: 20px;
+  display: block;
 }
 
 /* 아이콘 */
 header > #main_header > #gnb_wrap > #icons {
-    float: right;
-    overflow: hidden;
-    height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
 header > #main_header > #gnb_wrap > #icons > .login {
-    float: left;
-    margin-right: 10px;
+  float: left;
+  margin-top: 20px;
+  padding: 20px 0;
 }
 header > #main_header > #gnb_wrap > #icons > .login > span {
-    border: 3px solid white;
-    border-radius: 20px;
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 15px;
+  line-height: 15px;
+  color: white;
 }
 
 header > #main_header > #gnb_wrap > #icons > .icons {
-    overflow: hidden;
-    float: left;
+  overflow: hidden;
+  margin-top: 10px;
+  float: left;
+  padding: 20px 0;
 }
 
 header > #main_header > #gnb_wrap > #icons > .icons > div {
-    float: left;
-    margin-left: 10px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
+  float: left;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+}
+/* 메인페이지 */
+header > #main_container {
+  width: 100%;
+  margin: 100px auto;
+  text-align: center;
+}
+header > #main_container > .komipo {
+  display: inline-block;
+}
+header > #main_container > .komipo > strong {
+  font-size: 6em;
+}
+header > #main_container > .komipo > strong > span {
+  color: #00712f;
+}
+header > #main_container > .main-title {
+  color: #333;
+  font-size: 1.3em;
+  line-height: 1.3em;
 }
 
 /* 컨텐츠 */
 #main_contents {
-
+  margin: 0 auto;
+  text-align: center;
 }
 
 #main_contents .content {
-    background-color: lightgreen;
 }
+
+#main_contents .title {
+  padding: 50px;
+}
+
+/* 콘텐츠 타이틀 헤더 */
+.title > span {
+  font-size: 3em;
+  display: block;
+  font-weight: 800;
+}
+#main_contents .content-img > a {
+  position: relative;
+}
+
+#main_contents .content-img > a > span {
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* 채용정보 */
+
 #main_contents > .employ {
-    background-color: rgb(143, 187, 143);
 }
+
+#main_contents > .employ > ul > li {
+  display: inline-block;
+  padding: 20px;
+}
+
+#main_contents > .employ > ul > li > a {
+  background-color: #00712f;
+  padding: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#main_contents > .employ > ul > li > a > div > span:nth-of-type(even) {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 1.3em;
+}
+
+/* 지점 */
 #main_contents > .location {
-    background-color: rgb(73, 148, 73);
 }
+
+/* 기사 */
 #main_contents > .article {
-    background-color: rgb(74, 168, 74);
+}
+#main_contents > .article > .title {
+  position: relative;
+  min-height: 100px;
+}
+#main_contents > .article > .title > span {
+  position: absolute;
+  right: 20px;
+  top: 50%;
 }
 
 /* 푸터 */
 footer {
-    background-color: #00712f;
+  background-color: black;
+  color: #999;
+  height: 300px;
+}
+
+footer > .footer {
+  border-bottom: 1px #333 solid;
+  padding: 30px;
+}
+
+footer > .footer > a {
+  padding: 10px;
+}
+
+footer > .footer-address {
+  margin: 30px;
+  overflow: hidden;
+}
+
+footer > .footer-address > address {
+  padding: 20px;
+  float: left;
+}
+
+footer > .footer-address > div:last-child {
+  position: relative;
+}
+
+footer > .footer-address > div:last-child > a {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 20px;
+  border: 1px #333 solid;
+}
+
+footer > .footer-address > div:last-child > a > i {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  header > #main_header > #gnb_wrap > #nav {
+    display: none;
+  }
 }
