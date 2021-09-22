@@ -1,2 +1,4 @@
 p {
-  color: pink; }
+  color: blue;
+  display: block;
+  text-transform: lowercase; }
