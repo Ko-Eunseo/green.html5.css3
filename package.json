@@ -1,0 +1,25 @@
+{
+  "name": "green.html5.css3-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass tomorrow-house/styles/main.scss tomorrow-house/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ko-Eunseo/green.html5.css3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ko-Eunseo/green.html5.css3/issues"
+  },
+  "homepage": "https://github.com/Ko-Eunseo/green.html5.css3#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
