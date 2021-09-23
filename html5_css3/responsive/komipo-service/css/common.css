@@ -204,89 +204,114 @@ header > #main_container > .main-title {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  height: 150vh;
 }
 #main_contents > .location::before {
     content: '';
     position: absolute;
+    display: block;
     background: #10af9f;
+    background-image: url(/html5_css3/responsive/komipo-service/img/section04_img02.png);
     border-radius: 100%;
-    width: 100rem;
-    height: 100rem;
+    background-repeat: no-repeat;
+    width: 80rem;
+    height: 80rem;
+    overflow: hidden;
+    right: -5rem;
+    top: 5rem;
+}
+#main_contents > .location > .location-komipo {
+  width: 80%;
+  margin: 0 auto;
 }
 
-#main_contents > .location > .title {
+#main_contents > .location > .location-komipo > .title {
   float: left;
+  z-index: 3;
 }
 
-#main_contents > .location > .title > span {
+#main_contents > .location > .location-komipo > .title > span {
   padding: 20px;
+  position: relative;
 }
 
-#main_contents > .location > .title > ul  {
+#main_contents > .location > .location-komipo > .title > ul  {
     color:rgb(135, 138, 141);
+    position:relative;
 }
 
-#main_contents > .location > .title > ul > li {
+#main_contents > .location > .location-komipo > .title > ul > li {
   padding: 10px;
   text-align: left;
   font-size: 1.1em;
   border-bottom: 1px solid rgb(196, 194, 194);
+  z-index: 2;
 }
-#main_contents > .location > .title > ul > li:hover {
+#main_contents > .location > .location-komipo > .title > ul > li:hover {
     background-color: darkgreen;
 }
-#main_contents > .location > .title > ul > li > a > i {
+#main_contents > .location > .location-komipo > .title > ul > li > a > i {
     float: right;
 }
 
-#main_contents > .location > .map {
+#main_contents > .location > .location-komipo > .map {
     overflow: hidden;
     text-align: left;
-    color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
     padding-top: 100px;
     position:relative;
     margin: 0 auto;
+    width: 70%;
 }
-#main_contents > .location > .map > .location-info {
+#main_contents > .location > .location-komipo > .map > .location-info {
     width: 40%;
     float: right;
     padding: 20px;
     overflow: hidden;
 }
-#main_contents > .location > .map > .img {
+#main_contents > .location > .location-komipo > .map > .img {
     background: url(/html5_css3/responsive/komipo-service/img/section04_img01.png);
     display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 14rem;
+    width: 13rem;
     height: 20rem;
     content: '';
     margin: 2rem 0 0 13rem;
+    position:absolute;
+    right: 50%;
 }
-#main_contents > .location > .map > .location-info > h1 {
+#main_contents > .location > .location-komipo > .map > .location-info > h1 {
     padding-bottom: 10px;
 }
 
-#main_contents > .location > .map > .location-info > p {
+#main_contents > .location > .location-komipo > .map > .location-info > p {
     text-align: left;
     padding-bottom: 10px;
+    width: 350px;
 }
-#main_contents > .location > .map > img {
-    padding-right: 30px;
+#main_contents > .location > .location-komipo > .map > img {
+    /* padding-right: 30px; */
+    padding-right: 5em;
 }
-#main_contents > .location > .map > .location-info > .location-go > i {
-    background-color: rgb(119, 114, 114);
+#main_contents > .location > .location-komipo > .map > .location-info > .location-go > i {
+    background-color: rgb(107, 74, 74);
     border-radius: 100%;
     padding: 10px;
+    float: left;
 }
-#main_contents > .location > .map > .location-info > .location-go > .border {
-  border-top: 1px solid gray;
+#main_contents > .location > .location-komipo > .map > .location-info > .location-go > .border {
+  border-top: 1px solid rgb(141, 141, 141);
   margin: 20px 0;
 }
-#main_contents > .location > .map > .location-info > .location-go > a {
+#main_contents > .location > .location-komipo > .map > .location-info > .location-go > strong {
+  margin-left: 5px;
+  line-height: 1.5rem;
+}
+#main_contents > .location > .location-komipo > .map > .location-info > .location-go > a {
   padding: 5px 25px;
-  border: 1px solid rgb(163, 163, 163);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 50px;
   margin-top: 20px;
   display: inline-block;
@@ -391,6 +416,8 @@ footer > .footer-address > div:last-child > a > i {
     #main_contents > .location > .title > ul > li > a > i {
     display: none;
     }
+
+
     #main_contents > .location > .map {
         float: none;
         width: 50%;
@@ -400,11 +427,20 @@ footer > .footer-address > div:last-child > a > i {
         float: none;
     }
 
-
-  #main_contents > .article > .title > content-header {
-    /* 동부발전 서비스 소식 센터로 오지 않음! */
+    #main_contents > .location > .location-komipo {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  
+    #main_contents > .location > .location-komipo > .map {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+    }
+  #main_contents > .article > .title {
+    position: relative;
   }
-
 
 }
 
@@ -412,9 +448,40 @@ footer > .footer-address > div:last-child > a > i {
   header > #main_header > #gnb_wrap > #nav {
     display: none;
   }
+  #main_contents > .location > .location-komipo {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #main_contents > .location > .location-komipo > .map {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #main_contents > .location::before {
+    border-radius: 0%;
+    top:0;
+    background-image: none;
+  }
+  #main_contents > .location > .location-komipo > .title {}
+  #main_contents > .location > .title {
+    float:none;
+    }
+
+  #main_contents > .location > .title > ul > li {
+    display: inline-block;
+    border: 1px solid gray;
+  }
+  #main_contents > .location > .title > ul > li > a > i {
+    display: none;
+  }
 
 }
 
-
-@media screen and (min-width: 1001px) {}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  #main_contents > .article > .title > span {
+    position: relative;
+  }
+}
 
