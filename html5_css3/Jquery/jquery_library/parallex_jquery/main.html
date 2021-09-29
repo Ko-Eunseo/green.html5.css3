@@ -56,7 +56,8 @@
                 }, 500);
             });
 
-            // 브라우저 크기 변화시 content부분을 가운데 유지하기 위해
+            // 브라우저 크기 변화시 content부분을 가운데 유지하기 위한 공식
+            // 미디어쿼리를 쓰자 별로 좋은방법 아님
             $(window).resize(function(){
                 $(".container").width($(window).width()).height($(window).height());
 
@@ -78,14 +79,10 @@
 
             //둘러보기 마우스 오버시 이미지 변경
             $(".icon img").hover(function(){
-                $(this).attr("src", $(this).attr("src".replace(".png","_over.png"));
-            }, function({
+                $(this).attr("src", $(this).attr("src").replace(".png","_over.png"));
+            }, function(){
                 $(this).attr("src", $(this).attr("src").replace("_over"))
-            }))
             });
-
-
-
 
         });
     </script>
