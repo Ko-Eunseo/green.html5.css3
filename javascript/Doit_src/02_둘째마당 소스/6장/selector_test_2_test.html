@@ -7,7 +7,9 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
-
+  $("#myList li").not(":first").css({"background-color":"pink"});
+  $("#myList li:nth-child(3)").css({"background-color":"yellow"});
+  $("#myList li").eq(2).css({"background-color":"lime"});
 });
 //]]>
 </script>
