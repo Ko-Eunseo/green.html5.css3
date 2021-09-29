@@ -6,7 +6,16 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
-
+	$(".btn1").on("click", function(e){
+		e.preventDefault();
+		$(".txt1").css({"background-color":"red"});
+	});
+	$(".btn2").on("click", function(e){
+		$(".txt2").css({"background-color":"beige"});
+	});
+	$(".btn3").on("dblclick", function(){
+		$(".txt3").css({"background-color":"beige"});
+	});
 });
 </script>
 </head>
