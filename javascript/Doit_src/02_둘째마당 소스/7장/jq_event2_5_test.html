@@ -6,7 +6,30 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".menuWrap_1 a").on("click", function(e){
+		e.preventDefault();
+		$(".menuWrap_1 a").css({
+			"background-color":"white"
+		});
+		$(this).css({
+			"background-color":"yellow"
+		});
+	});
 
+	$(".menuWrap_2 a").on("click", function(e){
+		e.preventDefault();
+		$(".menuWrap_2 a").css({
+			"background-color":"white"
+		});
+
+		var idx = $(".menuWrap_2 a").index(this);
+
+		$(".menuWrap_2 a").eq(idx).css({
+			"background-color":"lime"
+		});
+		$(".idxNum").text(idx);
+
+	});
 });
 </script>
 </head>
