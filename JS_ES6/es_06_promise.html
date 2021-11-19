@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // promise: 데이터를 받았다면 데이터를 넘겨주어 그 다음 작업을 할 수 있게 돕는 객체
+        const promise1 = new Promise((resolve, reject) => {
+            resolve('Success!');
+        });
+
+        promise1.then((result) => {
+            console.log(result);
+        });
+
+        // promise1.then(
+        //     result => console.log(result),
+        //     error => console.log(error) 
+        // )
+
+        //콜백함수는 함수 내에 매개변수가 아니라 함수가 들어있는 것! 
+        //콜백지옥=>프로미스, 어싱크어웨이트가 나옴
+        //데이터를 받아 순서대로 할 수 있게 한다.
+        //리솔브에 넘겨주고싶은 값을 쓴다. 선언한 변수에 .then을 붙여서 순서대로 실행할 수 있다.(동기적으로)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
